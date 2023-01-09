@@ -1,5 +1,6 @@
 package com.example.compose_labs
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
 fun MyApp(modifier: Modifier = Modifier){
     var nickNames: List<String> = listOf("Beans","Shmeans")
 
-        Column() {
+        Column(){
             for (nickName in nickNames){
                 Greeting(nickName)
             }
