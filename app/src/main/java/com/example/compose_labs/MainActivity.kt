@@ -24,13 +24,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp(modifier: Modifier = Modifier){
-    var nickNames: List<String> = listOf("Beans","Shmeans")
+    var nickNames = listOf("Test","Stest","Test","test")
 
         Column(){
             for (nickName in nickNames){
                 Greeting(nickName)
             }
         }
+
 }
 
 
