@@ -38,7 +38,7 @@ fun MyApp(modifier: Modifier = Modifier){
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun AppPreview() {
     ComposelabsTheme {
         MyApp()
     }
