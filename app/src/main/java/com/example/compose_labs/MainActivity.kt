@@ -11,6 +11,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.compose_labs.components.CardScreen
 import com.example.compose_labs.components.Greeting
 import com.example.compose_labs.components.OnboardingScreen
 import com.example.compose_labs.ui.theme.ComposelabsTheme
@@ -33,11 +34,7 @@ fun MyApp(modifier: Modifier = Modifier){
     if(navigateToScreen.value){
         var nickNames = listOf("Test","Test","Test","test");
 
-        Column(){
-            for (nickName in nickNames){
-                Greeting(nickName)
-            }
-        }
+        CardScreen(listOfNames = nickNames)
     }else{
         OnboardingScreen(message = "Welcome to the best app ever", onClickFn = { navigateToScreen.value = true;         Log.d("debug", "${navigateToScreen.value}") })
 
