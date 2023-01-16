@@ -34,9 +34,9 @@ fun MyApp(modifier: Modifier = Modifier){
     if(navigateToScreen.value){
         var nickNames = listOf("Test","Test","Test","test");
 
-        CardScreen(listOfNames = nickNames)
+        CardScreen(listOfNames = nickNames, onClickFn = {navigateToScreen.value=false})
     }else{
-        OnboardingScreen(message = "Welcome to the best app ever", onClickFn = { navigateToScreen.value = true;         Log.d("debug", "${navigateToScreen.value}") })
+        OnboardingScreen(message = "Welcome to the best app ever", onClickFn = { navigateToScreen.value = true })
 
     }
 }
